@@ -1,0 +1,33 @@
+version: 2
+
+master_reference:
+  path: assets/references/master_reference.jpg
+  locked: true
+  master_revision: 2
+  role: full_style_anchor
+
+scene_references:
+  daylight_outdoor:
+    path: assets/references/scene_daylight_outdoor.jpg
+    optional: true
+    role: daylight_flash_behavior
+  indoor_daily:
+    path: assets/references/scene_indoor_daily.jpg
+    optional: true
+    role: ordinary_indoor_flash_behavior
+  night_street:
+    path: assets/references/scene_night_street.jpg
+    optional: true
+    role: night_falloff_and_flash_strength
+  dining_food:
+    path: assets/references/scene_dining_food.jpg
+    optional: true
+    role: tabletop_and_specular_behavior
+  strong_reflective_surfaces:
+    path: assets/references/scene_strong_reflective_surfaces.jpg
+    optional: true
+    role: reflective_material_and_hotspot_behavior
+  close_subject:
+    path: assets/references/scene_close_subject.jpg
+    optional: true
+    role: close_subject_emphasis_and_highlight_behavior

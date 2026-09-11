@@ -1,0 +1,32 @@
+{
+  "skill_name": "direct-flash",
+  "version": "2.1-final",
+  "note": "These are acceptance cases, not evidence that the Skill has passed image-generation testing.",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "按基准图迁移。这张原本颜色我已经满意，只需要更明显的直闪感。",
+      "expected_output": "Treats the new upload as edit target, keeps the locked MASTER_REFERENCE unchanged, uses lighting-first behavior, preserves the target palette as much as practical, increases near-camera frontal illumination and subject/far-environment separation without globally lifting exposure, then inspects the actual result."
+    },
+    {
+      "id": 2,
+      "prompt": "镜子和金属反光还不够明显，按基准图做直闪。",
+      "expected_output": "Classifies the target as strong_reflective_surfaces and increases specular clarity and flash hotspots while avoiding large clipped white patches."
+    },
+    {
+      "id": 3,
+      "prompt": "直闪再重一点，其他都别动。",
+      "expected_output": "Treats the request as a delta and increases flash behavior only."
+    },
+    {
+      "id": 4,
+      "prompt": "只把背景其他颜色再压一压，人和肤色别动。",
+      "expected_output": "Reduces non-subject/background saturation while keeping skin and major subject colors stable."
+    },
+    {
+      "id": 5,
+      "prompt": "这是很近的半身/脸部主体，按之前风格做直闪，但脸不能改。",
+      "expected_output": "Classifies the target as close_subject and preserves facial geometry while increasing near-subject flash presence."
+    }
+  ]
+}
