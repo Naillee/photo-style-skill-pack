@@ -1,6 +1,6 @@
 # Reference image mapping
 
-Put your seven reference images into `skills/direct-flash/assets/references/` using these filenames, in the same left-to-right order you confirmed:
+The seven Direct Flash reference images now live at `skills/direct-flash/assets/references/` with these fixed filenames:
 
 1. master → `master_reference.jpg`
 2. 白天户外 → `scene_daylight_outdoor.jpg`
@@ -11,3 +11,5 @@ Put your seven reference images into `skills/direct-flash/assets/references/` us
 7. 特写主体 → `scene_close_subject.jpg`
 
 The Skill treats `master_reference.jpg` as the only locked full-style master. Scene references are auxiliary and do not override it.
+
+The original full-resolution uploads have been moved into the reference directory and replace the earlier low-resolution repository copies.
