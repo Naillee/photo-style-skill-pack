@@ -1,6 +1,10 @@
-# Direct Flash Skill Pack v2
+# Photo Style Skill Pack
 
-This pack separates a reusable photo-editing base from the Direct Flash style layer.
+This pack separates a reusable photo-editing base from style-specific photo editing layers.
+
+Current included styles:
+
+- `direct-flash` - high-preservation near-camera frontal flash editing.
 
 ## Structure
 
@@ -48,7 +52,7 @@ The reference images included in this package are fixed as follows:
 ## Design decisions
 
 - `photo-edit-base` owns image roles, preservation, prompt compilation, actual-image attachment, inspection, retry limits, and dimension reporting.
-- `direct-flash` owns only Direct Flash style logic: frontal flash behavior, subject/background separation, restrained cool-neutral color, ambient-cast cleanup, scene adaptations, and reference routing.
+- Style-specific skills own only their visual logic. The current `direct-flash` layer owns frontal flash behavior, subject/background separation, restrained cool-neutral color, ambient-cast cleanup, scene adaptations, and reference routing.
 - There is exactly one locked `MASTER_REFERENCE`. New uploads are edit targets by default and never replace the master unless the user explicitly asks to change the master/reference.
 - Scene references are optional helpers. They can refine a matched scene but never override the master.
 - Preference levels are `low / medium / high`, defined by visible image changes rather than pseudo-precise numeric scores.
