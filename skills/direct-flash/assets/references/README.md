@@ -18,8 +18,6 @@ This repository contains the currently selected Direct Flash reference set.
 - Scene references are auxiliary and should be used one at a time when the target scene matches.
 - New user uploads are edit targets by default and never replace the master unless explicitly requested.
 
-## Image resolution note
+## Image status
 
-The JPG files committed through the ChatGPT GitHub connector are optimized low-resolution repository copies of the exact seven images selected for this Skill. They preserve the broad lighting, color, composition, and flash relationships needed to keep the mapping intact, but they are not the original full-resolution uploads.
-
-For highest-fidelity production use, replace these seven JPG files in place with the original images while keeping the filenames unchanged. No Skill text or manifest changes are required after replacement.
+The seven files currently stored in this directory are the original user-uploaded reference images moved from the repository root into their final fixed paths. Keep these filenames unchanged so `manifest.yaml` continues to resolve them correctly.
